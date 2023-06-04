@@ -71,7 +71,7 @@ app.get('/api/member',(req,res)=>{
     var lname = req.body.lname;
 
     //
-    connection.query(`INSERT INTO actor (first_name, last_name) VALUES ('${fname}','${lname}');`,(err,rows,fields) =>{
+    connection.query(`INSERT INTO actor(first_name, last_name) VALUES ('${fname}','${lname}');`,(err,rows,fields) =>{
         if(err) throw err
 
        
