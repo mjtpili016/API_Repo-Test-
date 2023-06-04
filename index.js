@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path')
 const app = express();
+var cors = require("cors");
 const moment = require('moment');
 const mysql = require('mysql');
 
@@ -17,6 +18,11 @@ const logger = (req,res, next )=>{
 }
 
 app.use(logger);
+
+
+//for Cors
+app.use(cors());
+
 
 const connection = mysql.createConnection({
     host: 'localhost',
